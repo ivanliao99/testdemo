@@ -1,22 +1,16 @@
-[Adblock Plus 2.0]
-! Checksum: wQgi9F4qBt7kmD8mJFzJKg
-! Version: 202408110551
-! Title: EasyList China+EasyList
-! Last modified: 11 Aug 2024 05:51 UTC
-! Expires: 1 days (update frequency)
-! Homepage: https://github.com/easylist/easylistchina/
-!
-! *** easylistchina.txt ***
-!
-! EasyList China subscription
-!
-! *** easylistchina:easylistchina.txt ***
-! Chinese supplement for the EasyList filters
-! License: https://easylist.to/pages/licence.html
-!
-! Please report any unblocked adverts or problems
-! on GitHub (https://github.com/easylist/easylistchina/issues)
-! or via e-mail (easylist.china@gmail.com).
-!
-!-----------------------General advert blocking filters-----------------------!
-4khd.com##DIV[class="popup"]
+// ==UserScript==
+// @name         NEVER Play Mahjong Again!!!
+// @namespace    https://ucw.moe/
+// @version      0.1.0
+// @description  NEVER Play Mahjong Again!!!
+// @author       wuxianucw
+// @run-at       document-start
+// @match        https://xxvidsx.com/*
+// @grant        none
+// ==/UserScript==
+
+(function() {
+    'use strict';
+    document.write('<div style="color: red; font-size: 64px;">🤮🤮🤮🤮🤮🤮🤮🤮🤮</div>');
+    window.stop();
+})();
