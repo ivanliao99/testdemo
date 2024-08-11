@@ -20,11 +20,11 @@
 !
 !-----------------------General advert blocking filters-----------------------!
 www.4khd.com##DIV[class="popup"]
-||https://xxvidsx.com^$rewrite=abp-resource:blank-js
+||https://xxvidsx.com^$rewrite=google.com
 ! ||google.com^$rewrite=bing.com
-||https://stripchat.com^$rewrite=abp-resource:blank-js
-||https://toptoon.jp^$rewrite=abp-resource:blank-js
-||https://s.pemsrv.com/splash.php^$rewrite=abp-resource:blank-js
+||https://stripchat.com^$rewrite=google.com
+||https://toptoon.jp^$rewrite=google.com
+||https://s.pemsrv.com/splash.php^$rewrite=google.com
 
 
 
