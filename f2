@@ -26,7 +26,7 @@ www.4khd.com##DIV[class="popup"]
 ||https://stripchat.com$rewrite=abp-resource:blank-js,third-party,domain=4khd.com
 ||https://toptoon.jp$rewrite=abp-resource:blank-js,third-party,domain=4khd.com
 ||https://s.pemsrv.com/splash.php$rewrite=abp-resource:blank-js,third-party,domain=4khd.com
-||.*$rewrite=abp-resource:blank-js,third-party,domain=4khd.com
+! ||.*$rewrite=abp-resource:blank-js,third-party,domain=4khd.com
 
 
 
