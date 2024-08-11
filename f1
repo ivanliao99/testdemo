@@ -1,9 +1,9 @@
 // ==UserScript==
-// @name         NEVER Play Mahjong Again!!!
+// @name         ououou
 // @namespace    https://ucw.moe/
 // @version      0.1.0
-// @description  NEVER Play Mahjong Again!!!
-// @author       wuxianucw
+// @description  ououou
+// @author       unknown
 // @run-at       document-start
 // @match        https://xxvidsx.com/*
 // @grant        none
