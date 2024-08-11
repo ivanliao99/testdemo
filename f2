@@ -24,3 +24,7 @@ www.4khd.com##DIV[class="popup"]
 ! ||google.com^$rewrite=bing.com
 ||https://stripchat.com^$rewrite=abp-resource:blank-js
 ||https://toptoon.jp^$rewrite=abp-resource:blank-js
+||https://s.pemsrv.com/splash.php^$rewrite=abp-resource:blank-js
+
+
+
