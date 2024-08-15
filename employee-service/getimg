@@ -9,6 +9,7 @@
 // @match        *://juejin.cn/post/*
 // @match        http://www.netbian.com/*
 // @match        https://www.4khd.com/*
+// @match        https://4kup.net/*
 // @grant        GM_xmlhttpRequest
 // @require      https://raw.githubusercontent.com/ivanliao99/testdemo/master/employee-service/get-infos-by-site.js
 // ==/UserScript==
