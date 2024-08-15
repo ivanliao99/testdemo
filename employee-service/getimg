@@ -25,13 +25,13 @@ function uploadImage(base64, folderRoot, folder, filename, idx) {
     // 创建 FormData 对象
     const formData = new FormData();
     formData.append('image', base64); // 第三个参数是文件名
-    //alert(base64)
+    console.log(base64)
     formData.append('folderRoot', folderRoot)
-    //alert(folderRoot)
+    console.log(folderRoot)
     formData.append('folder', folder);
-    //alert(folder)
+    console.log(folder)
     formData.append('filename', filename);
-    //alert(filename)
+    console.log(filename)
     formData.append('idx', idx);
 
 
@@ -39,11 +39,11 @@ function uploadImage(base64, folderRoot, folder, filename, idx) {
         method: 'POST',
         url: UPLOAD_ADDR,
         data: formData, // 直接将 FormData 作为 data 传递
-        headers: { // 设置 Content-Type 为 multipart/form-data
+        /*headers: { // 设置 Content-Type 为 multipart/form-data
             'Content-Type': undefined // GM_xmlhttpRequest 会自动处理 FormData 的 Content-Type
-        },
+        },*/
         onload: function (response) {
-            //console.log('Response:', response.responseText);
+            console.log('Response:', response.responseText);
             //alert(response)
         },
         onerror: function (error) {
