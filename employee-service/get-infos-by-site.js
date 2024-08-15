@@ -17,7 +17,7 @@ function getInfosBySite() {
         var title = document.getElementsByClassName('article-title')[0];
 
         var imgs = at.getElementsByTagName("img");
-        var folderRoot = "D:\\liaoyj\\test\\juejin\\";
+        var folderRoot = "C:\\Download\\juejin\\";
         var folder = title.innerText;
 
         return { imgs, folderRoot, folder };
@@ -28,7 +28,7 @@ function getInfosBySite() {
 
         var page = document.getElementsByClassName("page")[0];
         var curPage = page.getElementsByTagName("b")[0];
-        var folderRoot = "D:\\liaoyj\\test\\bian\\";
+        var folderRoot = "C:\\Download\\bian\\";
         var folder = curPage.innerText;
 
 
