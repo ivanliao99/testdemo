@@ -45,4 +45,13 @@ function getInfosBySite() {
 
         return { imgs, folderRoot, folder }
     }
+    else if (currentUrl.indexOf('://4kup.net/') != -1) {
+    var con = document.getElementById("gallery") 
+    var imgs = con.getElementsByTagName("img") 
+    var folderRoot = "C:\\Download\\4kup\\"
+    var title = document.getElementsByClassName("entry-header")[0] 
+    var folder = title.getElementsByTagName('h1')[0].innerText 
+
+    return { imgs, folderRoot, folder }
+}
 }
