@@ -13,46 +13,44 @@ function getInfosBySite() {
 
     if (currentUrl.indexOf('juejin.cn/post') != -1) {
         var articleA = document.getElementsByClassName('article-area')[0];
-
         var at = articleA.getElementsByTagName("article")[0];
+        var _imgs = at.getElementsByTagName("img");
+        
         var title = document.getElementsByClassName('article-title')[0];
+        var _folderRoot = "C:\\Download\\juejin\\";
+        var _folder = title.innerText;
 
-        var imgs = at.getElementsByTagName("img");
-        var folderRoot = "C:\\Download\\juejin\\";
-        var folder = title.innerText;
-
-        return { imgs, folderRoot, folder };
+        return { imgs: _imgs, folderRoot: _folderRoot, folder: _folder }
     }
     else if (currentUrl.indexOf('www.netbian.com/index') != -1) {
         var list = document.getElementsByClassName('list')[0];
-        var imgs = list.getElementsByTagName("img");
+        var _imgs = list.getElementsByTagName("img");
 
         var page = document.getElementsByClassName("page")[0];
         var curPage = page.getElementsByTagName("b")[0];
-        var folderRoot = "C:\\Download\\bian\\";
-        var folder = curPage.innerText;
+        var _folderRoot = "C:\\Download\\bian\\";
+        var _folder = curPage.innerText;
 
-
-
-        return { imgs, folderRoot, folder }
+        return { imgs: _imgs, folderRoot: _folderRoot, folder: _folder }
     }
     else if (currentUrl.indexOf('4khd.com/content') != -1) {
         var imgCon = document.getElementById("basicExample")
-        var imgs = imgCon.getElementsByTagName("img")
+        var _imgs = imgCon.getElementsByTagName("img")
         
-        var folderRoot = "C:\\Download\\4khd\\"
         var title = document.getElementsByClassName("wp-block-post-title")[0]
-        var folder = title.innerText
+        var _folderRoot = "C:\\Download\\4khd\\"
+        var _folder = title.innerText
 
-        return { imgs, folderRoot, folder }
+        return { imgs: _imgs, folderRoot: _folderRoot, folder: _folder }
     }
     else if (currentUrl.indexOf('://4kup.net/') != -1) {
-    var con = document.getElementById("gallery") 
-    var imgs = con.getElementsByTagName("img") 
-    var folderRoot = "C:\\Download\\4kup\\"
-    var title = document.getElementsByClassName("entry-header")[0] 
-    var folder = title.getElementsByTagName('h1')[0].innerText 
+        var con = document.getElementById("gallery") 
+        var _imgs = con.getElementsByTagName("img") 
 
-    return { imgs, folderRoot, folder }
-}
+        var title = document.getElementsByClassName("entry-header")[0] 
+        var _folderRoot = "C:\\Download\\4kup\\"
+        var _folder = title.getElementsByTagName('h1')[0].innerText 
+
+        return { imgs: _imgs, folderRoot: _folderRoot, folder: _folder }
+    }
 }
