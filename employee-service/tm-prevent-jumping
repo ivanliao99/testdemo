@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         ououou
+// @name         prevent jumping
 // @namespace    https://ucw.moe/
 // @version      0.1.0
-// @description  ououou
+// @description  prevent jumping
 // @author       unknown
 // @run-at       document-start
 // @match        https://xxvidsx.com/*
