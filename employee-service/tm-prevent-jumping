@@ -6,12 +6,14 @@
 // @author       unknown
 // @run-at       document-start
 // @match        https://xxvidsx.com/*
+// @match        https://zh.stripchat.com/*
+// @match        https://for-download.com/*
 // @grant        none
 // ==/UserScript==
 
 (function() {
     'use strict';
-    document.write('<div style="color: red; font-size: 64px;">🤮🤮🤮🤮🤮🤮🤮🤮🤮</div>');
+    document.write('<div style="color: red; font-size: 64px;">?</div>');
     window.stop();
     history.back();
 })();
