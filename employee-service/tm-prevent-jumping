@@ -5,9 +5,10 @@
 // @description  prevent jumping
 // @author       unknown
 // @run-at       document-start
-// @match        https://xxvidsx.com/*
-// @match        https://zh.stripchat.com/*
-// @match        https://for-download.com/*
+// @match        *://xxvidsx.com/*
+// @match        *://zh.stripchat.com/*
+// @match        *://for-download.com/*
+// @match        *://citynow*
 // @grant        none
 // ==/UserScript==
 
