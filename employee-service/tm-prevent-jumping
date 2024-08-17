@@ -13,4 +13,5 @@
     'use strict';
     document.write('<div style="color: red; font-size: 64px;">🤮🤮🤮🤮🤮🤮🤮🤮🤮</div>');
     window.stop();
+    history.back();
 })();
