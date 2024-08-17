@@ -1,0 +1,17 @@
+// ==UserScript==
+// @name         get imgs2
+// @namespace    https://google.com/
+// @version      0.1.0
+// @description  get imgs2
+// @author       none
+// @run-at       document-idle
+// @match        https://www.baidu.com/*
+// @match        *://juejin.cn/post/*
+// @match        http://www.netbian.com/*
+// @match        https://www.4khd.com/*
+// @match        https://doofl.xxtt.info/*
+// @match        https://4kup.net/*
+// @grant        GM_xmlhttpRequest
+// @require      https://raw.githubusercontent.com/ivanliao99/testdemo/master/employee-service/get-infos-by-site.js
+// @require      https://raw.githubusercontent.com/chanchan098/Docs/master/tools/get-img.js
+// ==/UserScript==
