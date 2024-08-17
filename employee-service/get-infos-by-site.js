@@ -43,6 +43,16 @@ function getInfosBySite() {
 
         return { imgs: _imgs, folderRoot: _folderRoot, folder: _folder }
     }
+    else if (currentUrl.indexOf('doofl.xxtt.info/content') != -1) {
+        var imgCon = document.getElementById("basicExample")
+        var _imgs = imgCon.getElementsByTagName("img")
+        
+        var title = document.getElementsByClassName("wp-block-post-title")[0]
+        var _folderRoot = "C:\\Download\\4khd\\"
+        var _folder = title.innerText
+
+        return { imgs: _imgs, folderRoot: _folderRoot, folder: _folder }
+    }        
     else if (currentUrl.indexOf('://4kup.net/') != -1) {
         var con = document.getElementById("gallery") 
         var _imgs = con.getElementsByTagName("img") 
