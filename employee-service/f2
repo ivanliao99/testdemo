@@ -21,15 +21,6 @@
 !-----------------------General advert blocking filters-----------------------!
 www.4khd.com##DIV[class="popup"]
 
-! ||google.com$rewrite=abp-resource:blank-js,domain=4khd.com
-||https://xxvidsx.com$rewrite=abp-resource:blank-js,third-party,domain=www.4khd.com
-||https://xxvidsx.com/index/player$rewrite=abp-resource:blank-js,third-party,domain=www.4khd.com
-||https://xxvidsx.com$rewrite=abp-resource:blank-js,$~third-party,domain=4khd.com
-||https://xxvidsx.com/index/player$rewrite=abp-resource:blank-js,$~third-party,domain=www.4khd.com
-||https://stripchat.com$rewrite=abp-resource:blank-js,third-party,domain=www.4khd.com
-||https://toptoon.jp$rewrite=abp-resource:blank-js,third-party,domain=www.4khd.com
-||https://s.pemsrv.com/splash.php$rewrite=abp-resource:blank-js,third-party,domain=www.4khd.com
-! ||.*$rewrite=abp-resource:blank-js,third-party,domain=4khd.com
 
 
 
