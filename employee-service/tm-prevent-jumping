@@ -1,0 +1,16 @@
+// ==UserScript==
+// @name         ououou
+// @namespace    https://ucw.moe/
+// @version      0.1.0
+// @description  ououou
+// @author       unknown
+// @run-at       document-start
+// @match        https://xxvidsx.com/*
+// @grant        none
+// ==/UserScript==
+
+(function() {
+    'use strict';
+    document.write('<div style="color: red; font-size: 64px;">🤮🤮🤮🤮🤮🤮🤮🤮🤮</div>');
+    window.stop();
+})();
