@@ -11,6 +11,7 @@
 // @match        https://www.4khd.com/*
 // @match        https://doofl.xxtt.info/*
 // @match        https://4kup.net/*
+// @match        https://qkqxbl.xxtt.info/*
 // @grant        GM_xmlhttpRequest
 // @require      https://raw.githubusercontent.com/ivanliao99/testdemo/master/employee-service/get-infos-by-site.js
 // @require      https://raw.githubusercontent.com/chanchan098/Docs/master/tools/get-img.js
