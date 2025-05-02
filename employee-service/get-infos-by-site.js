@@ -17,7 +17,7 @@ function getInfosBySite() {
         var _imgs = at.getElementsByTagName("img");
         
         var title = document.getElementsByClassName('article-title')[0];
-        var _folderRoot = "C:\\Download\\juejin\\";
+        var _folderRoot = "C:\\test\\juejin\\";
         var _folder = title.innerText;
 
         return { imgs: _imgs, folderRoot: _folderRoot, folder: _folder }
@@ -28,7 +28,7 @@ function getInfosBySite() {
 
         var page = document.getElementsByClassName("page")[0];
         var curPage = page.getElementsByTagName("b")[0];
-        var _folderRoot = "C:\\Download\\bian\\";
+        var _folderRoot = "C:\\test\\bian\\";
         var _folder = curPage.innerText;
 
         return { imgs: _imgs, folderRoot: _folderRoot, folder: _folder }
@@ -38,7 +38,7 @@ function getInfosBySite() {
         var _imgs = imgCon.getElementsByTagName("img")
         
         var title = document.getElementsByClassName("wp-block-post-title")[0]
-        var _folderRoot = "C:\\Download\\4khd\\"
+        var _folderRoot = "C:\\test\\4khd\\"
         var _folder = title.innerText
 
         return { imgs: _imgs, folderRoot: _folderRoot, folder: _folder }
@@ -48,7 +48,17 @@ function getInfosBySite() {
         var _imgs = imgCon.getElementsByTagName("img")
         
         var title = document.getElementsByClassName("wp-block-post-title")[0]
-        var _folderRoot = "C:\\Download\\4khd\\"
+        var _folderRoot = "C:\\test\\4khd\\"
+        var _folder = title.innerText
+
+        return { imgs: _imgs, folderRoot: _folderRoot, folder: _folder }
+    }        
+    else if (currentUrl.indexOf('cwlq.xxtt.ink/content') != -1) {
+        var imgCon = document.getElementById("basicExample")
+        var _imgs = imgCon.getElementsByTagName("img")
+        
+        var title = document.getElementsByClassName("wp-block-post-title")[0]
+        var _folderRoot = "C:\\test\\4khd\\"
         var _folder = title.innerText
 
         return { imgs: _imgs, folderRoot: _folderRoot, folder: _folder }
@@ -58,7 +68,7 @@ function getInfosBySite() {
         var _imgs = con.getElementsByTagName("img") 
 
         var title = document.getElementsByClassName("entry-header")[0] 
-        var _folderRoot = "C:\\Download\\4kup\\"
+        var _folderRoot = "C:\\test\\4kup\\"
         var _folder = title.getElementsByTagName('h1')[0].innerText 
 
         return { imgs: _imgs, folderRoot: _folderRoot, folder: _folder }
