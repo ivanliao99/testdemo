@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name         Go to render for nginx
 // @namespace    http://tampermonkey.net/
-// @version      2025-05-03
-// @description  try to take over the world!
-// @author       You
+// @version      2025-05-03-2
+// @author       Jo
 // @exclude      http://192.168.1.103:7799/index/*
 // @match        http://192.168.1.103:7799/4khd/*
 // @match        http://192.168.1.103:7799/4kup/*
+// @match        http://192.168.1.103:7799/everiaclub/*
 // @run-at       document-end
 // @grant        none
 // ==/UserScript==
@@ -15,7 +15,8 @@
     'use strict';
     var fullmatchs = [
         "http://192.168.1.103:7799/4khd/",
-        "http://192.168.1.103:7799/4kup/"
+        "http://192.168.1.103:7799/4kup/",
+        "http://192.168.1.103:7799/everiaclub/"
     ]
 
     const currentUrl = window.location.href;
