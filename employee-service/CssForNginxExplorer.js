@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Css for nginx explorer
 // @namespace    http://tampermonkey.net/
-// @version      2025-05-03
+// @version      2025-05-03-1
 // @description  try to take over the world!
 // @author       You
 // @match        http://192.168.1.103:7799/*
