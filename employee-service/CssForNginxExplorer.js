@@ -12,23 +12,7 @@
 
 (function () {
     'use strict';
-    function isMobile() {
-        return /Mobi|Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
-    }
-
-    if (isMobile()) {
-        var metas = document.getElementsByTagName("meta")
-        if (metas.length == 0) {
-            // 创建一个新的 <meta> 标签
-            const metaTag = document.createElement('meta');
-            metaTag.name = "viewport";
-            metaTag.content = "width=device-width, initial-scale=1.0";
-
-            // 将这个 <meta> 标签添加到 <head> 中
-            document.head.appendChild(metaTag);
-            document.documentElement.style.zoom = '1'; // 某些浏览器支持
-        }
-    }
+   
 
     // 创建一个 <style> 元素
     const style = document.createElement('style');
@@ -37,13 +21,14 @@
             body {
                 background: #f7f7f7;
             }
+            pre{font-size:30;}
             a {
                 
                 margin-top:20px;
                 text-decoration: none;
                 display: inline-block;
                 color: #484848;
-                font-size: 20px;
+                font-size: 45px;
                 font-family: auto;
             }
         }
