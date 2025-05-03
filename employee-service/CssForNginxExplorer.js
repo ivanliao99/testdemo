@@ -21,7 +21,7 @@
             body {
                 background: #f7f7f7;
             }
-            pre{font-size:30;}
+            pre{font-size:30px;}
             a {
                 
                 margin-top:20px;
