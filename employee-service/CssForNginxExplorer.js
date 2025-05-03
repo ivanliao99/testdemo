@@ -26,6 +26,7 @@
 
             // 将这个 <meta> 标签添加到 <head> 中
             document.head.appendChild(metaTag);
+            document.documentElement.style.zoom = '1'; // 某些浏览器支持
         }
     }
 
