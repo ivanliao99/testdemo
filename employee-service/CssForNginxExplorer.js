@@ -12,11 +12,15 @@
 
 (function () {
     'use strict';
-   
 
-    // 创建一个 <style> 元素
-    const style = document.createElement('style');
-    style.innerHTML = `
+    function isMobile() {
+        return /Mobi|Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
+    }
+
+    if (isMobile()) {
+        // 创建一个 <style> 元素
+        const style = document.createElement('style');
+        style.innerHTML = `
         @media (max-width: 1024px) {
             body {
                 background: #f7f7f7;
@@ -35,21 +39,22 @@
 
     `;
 
-    // 将 <style> 标签添加到 <head> 中
-    document.head.appendChild(style);
-    document.querySelectorAll('body a').forEach(aTag => {
-        const next = aTag.nextSibling;
+        // 将 <style> 标签添加到 <head> 中
+        document.head.appendChild(style);
+        document.querySelectorAll('body a').forEach(aTag => {
+            const next = aTag.nextSibling;
 
-        if (next && next.nodeType === Node.TEXT_NODE && next.textContent.trim()) {
-            const span = document.createElement('span');
-            span.textContent = next.textContent;
-            span.style.display = 'block';
+            if (next && next.nodeType === Node.TEXT_NODE && next.textContent.trim()) {
+                const span = document.createElement('span');
+                span.textContent = next.textContent;
+                span.style.display = 'block';
 
-            aTag.style.display = 'block';
+                aTag.style.display = 'block';
 
-            aTag.parentNode.insertBefore(span, next);
-            aTag.parentNode.removeChild(next);
-        }
-    });
+                aTag.parentNode.insertBefore(span, next);
+                aTag.parentNode.removeChild(next);
+            }
+        });
+    }
     // Your code here...
 })();
