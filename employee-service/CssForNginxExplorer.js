@@ -11,8 +11,16 @@
 
 (function () {
     'use strict';
-   
+    // 创建一个新的 <meta> 标签
+    var metas = document.getElementsByTagName("meta")
+    if (metas.length == 0) {
+        const metaTag = document.createElement('meta');
+        metaTag.name = "viewport";
+        metaTag.content = "width=device-width, initial-scale=1.0";
 
+        // 将这个 <meta> 标签添加到 <head> 中
+        document.head.appendChild(metaTag);
+    }
     // 创建一个 <style> 元素
     const style = document.createElement('style');
     style.innerHTML = `
@@ -27,7 +35,7 @@
                 text-decoration: none;
                 display: inline-block;
                 color: #484848;
-                font-size: 20px;
+                font-size: initial;
                 font-family: auto;
             }
         }
