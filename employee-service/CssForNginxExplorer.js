@@ -11,16 +11,8 @@
 
 (function () {
     'use strict';
-    // 创建一个新的 <meta> 标签
-    var metas = document.getElementsByTagName("meta")
-    if (metas.length == 0) {
-        const metaTag = document.createElement('meta');
-        metaTag.name = "viewport";
-        metaTag.content = "width=device-width, initial-scale=1.0";
 
-        // 将这个 <meta> 标签添加到 <head> 中
-        document.head.appendChild(metaTag);
-    }
+
     // 创建一个 <style> 元素
     const style = document.createElement('style');
     style.innerHTML = `
@@ -28,17 +20,13 @@
             body {
                 background: #f7f7f7;
             }
-            pre {
-                display: flex;
-                flex-wrap: wrap;
-            }
             a {
-            
-                padding: 10px 0;
+                
+                margin-top:20px;
                 text-decoration: none;
                 display: inline-block;
                 color: #484848;
-                font-size: initial;
+                font-size: 20px;
                 font-family: auto;
             }
         }
@@ -47,5 +35,19 @@
 
     // 将 <style> 标签添加到 <head> 中
     document.head.appendChild(style);
+    document.querySelectorAll('body a').forEach(aTag => {
+        const next = aTag.nextSibling;
+
+        if (next && next.nodeType === Node.TEXT_NODE && next.textContent.trim()) {
+            const span = document.createElement('span');
+            span.textContent = next.textContent;
+            span.style.display = 'block';
+
+            aTag.style.display = 'block';
+
+            aTag.parentNode.insertBefore(span, next);
+            aTag.parentNode.removeChild(next);
+        }
+    });
     // Your code here...
 })();
