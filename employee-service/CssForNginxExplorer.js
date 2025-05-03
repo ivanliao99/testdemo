@@ -1,38 +1,51 @@
 // ==UserScript==
-// @name         Go to render
+// @name         Css for nginx explorer
 // @namespace    http://tampermonkey.net/
 // @version      2025-05-03
 // @description  try to take over the world!
 // @author       You
+// @match        http://192.168.1.103:7799/*
 // @exclude      http://192.168.1.103:7799/index/*
-// @match        http://192.168.1.103:7799/4khd/*
-// @match        http://192.168.1.103:7799/4kup/*
-// @run-at       document-end
 // @grant        none
 // ==/UserScript==
 
 (function () {
     'use strict';
-    var fullmatchs = [
-        "http://192.168.1.103:7799/4khd/",
-        "http://192.168.1.103:7799/4kup/"
-    ]
+    // 创建一个新的 <meta> 标签
+    var metas = document.getElementsByTagName("meta")
+    if (metas.length == 0) {
+        const metaTag = document.createElement('meta');
+        metaTag.name = "viewport";
+        metaTag.content = "width=device-width, initial-scale=1.0";
 
-    const currentUrl = window.location.href;
-    const newUrl = "http://192.168.1.103:7799/index?url=" + currentUrl
-    console.log(currentUrl)
-    // var matched = false
-    // for (var u of fullmatchs) {
-    //     if (u === currentUrl) {
-    //         matched = true
-    //         break;
-    //     }
-    // }
-    if (!fullmatchs.includes(currentUrl)) {
-        window.history.replaceState(null, '', newUrl);
-        window.location.href = newUrl;
+        // 将这个 <meta> 标签添加到 <head> 中
+        document.head.appendChild(metaTag);
     }
+    // 创建一个 <style> 元素
+    const style = document.createElement('style');
+    style.innerHTML = `
+        @media (max-width: 1024px) {
+            body {
+                background: #f7f7f7;
+            }
+            pre {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            a {
+            
+                padding: 10px 0;
+                text-decoration: none;
+                display: inline-block;
+                color: #484848;
+                font-size: initial;
+                font-family: auto;
+            }
+        }
 
+    `;
 
+    // 将 <style> 标签添加到 <head> 中
+    document.head.appendChild(style);
     // Your code here...
 })();
