@@ -11,13 +11,7 @@
 
 (function () {
     'use strict';
-    // 创建一个新的 <meta> 标签
-    const metaTag = document.createElement('meta');
-    metaTag.name = "viewport";
-    metaTag.content = "width=device-width, initial-scale=1.0";
-
-    // 将这个 <meta> 标签添加到 <head> 中
-    document.head.appendChild(metaTag);
+   
 
     // 创建一个 <style> 元素
     const style = document.createElement('style');
