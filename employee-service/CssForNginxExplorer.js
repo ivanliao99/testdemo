@@ -28,9 +28,12 @@
             body {
                 background: #f7f7f7;
             }
+            pre {
+                display: flex;
+                flex-wrap: wrap;
+            }
             a {
-                padding: 10px 0;
-                text-decoration: none;
+            
                 padding: 10px 0;
                 text-decoration: none;
                 display: inline-block;
