@@ -6,6 +6,7 @@
 // @author       You
 // @match        http://192.168.1.103:7799/*
 // @exclude      http://192.168.1.103:7799/index/*
+// @run-at       document-end
 // @grant        none
 // ==/UserScript==
 
