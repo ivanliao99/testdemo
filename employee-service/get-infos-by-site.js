@@ -61,7 +61,11 @@ function getInfosBySite() {
         var curPage = con.getElementsByTagName("h1")[0]
         _folder = curPage.innerText
         _imgs = con.getElementsByClassName("lazy")
-        _folderRoot = "C:\\test\\everiaclub\\";        
+        for(let img of _imgs){
+            img.src = img.getAttribute("data-original")
+        }
+       
+        _folderRoot = "C:\\test\\everiaclub\\";
     }
 
     return { imgs: _imgs, folderRoot: _folderRoot, folder: _folder }
