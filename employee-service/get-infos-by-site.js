@@ -60,20 +60,12 @@ function getInfosBySite() {
         var con = document.getElementsByClassName("mainleft")[0]
         var curPage = con.getElementsByTagName("h1")[0]
         _folder = curPage.innerText
-        _imgs = []
-        var tImgs = con.getElementsByClassName("lazy")
-        for(let img of tImgs){
-
-            var src = img.getAttribute("data-original")
-            
-            // for speed up
-            var mImg = document.createElement("img")
-            mImg.src = src
-            mImg.style = "display:none"
-            _imgs.push(mImg)
+        _imgs = con.getElementsByClassName("lazy")
+        for(let img of _imgs){
+            img.src = img.getAttribute("data-original")
         }
        
-        _folderRoot = "C:\\test\\everiaclub\\";        
+        _folderRoot = "C:\\test\\everiaclub\\";
     }
 
     return { imgs: _imgs, folderRoot: _folderRoot, folder: _folder }
