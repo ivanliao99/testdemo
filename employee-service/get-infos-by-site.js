@@ -4,7 +4,9 @@ function getInfosBySite() {
     //var imgs = document.getElementsByTagName("img")
     const currentUrl = window.location.href;
     console.log("Current Page URL:", currentUrl);
-
+    var _imgs;
+    var _folderRoot;
+    var _folder;
     // 如果需要处理URL中的特定部分，可以使用URL API
     // const url = new URL(currentUrl);
     // console.log("Hostname:", url.hostname);
@@ -14,63 +16,54 @@ function getInfosBySite() {
     if (currentUrl.indexOf('juejin.cn/post') != -1) {
         var articleA = document.getElementsByClassName('article-area')[0];
         var at = articleA.getElementsByTagName("article")[0];
-        var _imgs = at.getElementsByTagName("img");
-        
-        var title = document.getElementsByClassName('article-title')[0];
-        var _folderRoot = "C:\\test\\juejin\\";
-        var _folder = title.innerText;
+        _imgs = at.getElementsByTagName("img");
 
-        return { imgs: _imgs, folderRoot: _folderRoot, folder: _folder }
+        var title = document.getElementsByClassName('article-title')[0];
+        _folderRoot = "C:\\test\\juejin\\";
+        _folder = title.innerText;
+    
     }
     else if (currentUrl.indexOf('www.netbian.com/index') != -1) {
         var list = document.getElementsByClassName('list')[0];
-        var _imgs = list.getElementsByTagName("img");
+        _imgs = list.getElementsByTagName("img");
 
         var page = document.getElementsByClassName("page")[0];
         var curPage = page.getElementsByTagName("b")[0];
-        var _folderRoot = "C:\\test\\bian\\";
-        var _folder = curPage.innerText;
+        _folderRoot = "C:\\test\\bian\\";
+        _folder = curPage.innerText;
 
-        return { imgs: _imgs, folderRoot: _folderRoot, folder: _folder }
+    }  
+    else if (
+        currentUrl.indexOf('4khd.com/content') != -1 ||
+        currentUrl.indexOf('doofl.xxtt.info/content') != -1 ||
+        currentUrl.indexOf('cwlq.xxtt.ink/content') != -1
+    ) {
+
+        var imgCon = document.getElementById("basicExample")
+        _imgs = imgCon.getElementsByTagName("img")
+
+        var title = document.getElementsByClassName("wp-block-post-title")[0]
+        _folderRoot = "C:\\test\\4khd\\"
+        _folder = title.innerText
     }
-    else if (currentUrl.indexOf('4khd.com/content') != -1) {
-        var imgCon = document.getElementById("basicExample")
-        var _imgs = imgCon.getElementsByTagName("img")
-        
-        var title = document.getElementsByClassName("wp-block-post-title")[0]
-        var _folderRoot = "C:\\test\\4khd\\"
-        var _folder = title.innerText
 
-        return { imgs: _imgs, folderRoot: _folderRoot, folder: _folder }
-    }
-    else if (currentUrl.indexOf('doofl.xxtt.info/content') != -1) {
-        var imgCon = document.getElementById("basicExample")
-        var _imgs = imgCon.getElementsByTagName("img")
-        
-        var title = document.getElementsByClassName("wp-block-post-title")[0]
-        var _folderRoot = "C:\\test\\4khd\\"
-        var _folder = title.innerText
-
-        return { imgs: _imgs, folderRoot: _folderRoot, folder: _folder }
-    }        
-    else if (currentUrl.indexOf('cwlq.xxtt.ink/content') != -1) {
-        var imgCon = document.getElementById("basicExample")
-        var _imgs = imgCon.getElementsByTagName("img")
-        
-        var title = document.getElementsByClassName("wp-block-post-title")[0]
-        var _folderRoot = "C:\\test\\4khd\\"
-        var _folder = title.innerText
-
-        return { imgs: _imgs, folderRoot: _folderRoot, folder: _folder }
-    }        
     else if (currentUrl.indexOf('://4kup.net/') != -1) {
-        var con = document.getElementById("gallery") 
-        var _imgs = con.getElementsByTagName("img") 
+        var con = document.getElementById("gallery")
+        _imgs = con.getElementsByTagName("img")
 
-        var title = document.getElementsByClassName("entry-header")[0] 
-        var _folderRoot = "C:\\test\\4kup\\"
-        var _folder = title.getElementsByTagName('h1')[0].innerText 
+        var title = document.getElementsByClassName("entry-header")[0]
+        _folderRoot = "C:\\test\\4kup\\"
+        _folder = title.getElementsByTagName('h1')[0].innerText
 
-        return { imgs: _imgs, folderRoot: _folderRoot, folder: _folder }
     }
+    else if (currentUrl.indexOf('everiaclub.com') != -1) {
+        var con = document.getElementsByClassName("mainleft")[0]
+        var curPage = con.getElementsByTagName("h1")[0]
+        _folder = curPage.innerText
+        _imgs = con.getElementsByClassName("lazy")
+        _folderRoot = "C:\\test\\everiaclub\\";        
+    }
+
+    return { imgs: _imgs, folderRoot: _folderRoot, folder: _folder }
+
 }
