@@ -1,13 +1,14 @@
 // ==UserScript==
 // @name         Go to render for nginx
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @author       Jo
 // @exclude      http://192.168.1.103:7799/index/*
 // @match        http://192.168.1.103:7799/4khd/*
 // @match        http://192.168.1.103:7799/4kup/*
 // @match        http://192.168.1.103:7799/everiaclub/*
 // @match        http://192.168.1.103:7799/misskon/*
+// @match        http://192.168.1.103:7799/others/*
 // @run-at       document-end
 // @grant        none
 // ==/UserScript==
@@ -18,7 +19,8 @@
         "http://192.168.1.103:7799/4khd/",
         "http://192.168.1.103:7799/4kup/",
         "http://192.168.1.103:7799/everiaclub/",
-        "http://192.168.1.103:7799/misskon/"        
+        "http://192.168.1.103:7799/misskon/",
+        "http://192.168.1.103:7799/others/"
     ]
 
     const currentUrl = window.location.href;
