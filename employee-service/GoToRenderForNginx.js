@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Go to render for nginx
 // @namespace    http://tampermonkey.net/
-// @version      2025-05-03-2
+// @version      0.2
 // @author       Jo
 // @exclude      http://192.168.1.103:7799/index/*
 // @match        http://192.168.1.103:7799/4khd/*
