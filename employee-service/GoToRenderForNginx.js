@@ -7,6 +7,7 @@
 // @match        http://192.168.1.103:7799/4khd/*
 // @match        http://192.168.1.103:7799/4kup/*
 // @match        http://192.168.1.103:7799/everiaclub/*
+// @match        http://192.168.1.103:7799/misskon/*
 // @run-at       document-end
 // @grant        none
 // ==/UserScript==
@@ -16,7 +17,8 @@
     var fullmatchs = [
         "http://192.168.1.103:7799/4khd/",
         "http://192.168.1.103:7799/4kup/",
-        "http://192.168.1.103:7799/everiaclub/"
+        "http://192.168.1.103:7799/everiaclub/",
+        "http://192.168.1.103:7799/misskon/"        
     ]
 
     const currentUrl = window.location.href;
