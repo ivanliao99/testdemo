@@ -21,7 +21,7 @@ function getInfosBySite() {
         var title = document.getElementsByClassName('article-title')[0];
         _folderRoot = "C:\\test\\juejin\\";
         _folder = title.innerText;
-    
+
     }
     else if (currentUrl.indexOf('www.netbian.com/index') != -1) {
         var list = document.getElementsByClassName('list')[0];
@@ -32,7 +32,7 @@ function getInfosBySite() {
         _folderRoot = "C:\\test\\bian\\";
         _folder = curPage.innerText;
 
-    }  
+    }
     else if (
         currentUrl.indexOf('4khd.com/content') != -1 ||
         currentUrl.indexOf('doofl.xxtt.info/content') != -1 ||
@@ -61,11 +61,23 @@ function getInfosBySite() {
         var curPage = con.getElementsByTagName("h1")[0]
         _folder = curPage.innerText
         _imgs = con.getElementsByClassName("lazy")
-        for(let img of _imgs){
+        for (let img of _imgs) {
             img.src = img.getAttribute("data-original")
         }
-       
+
         _folderRoot = "C:\\test\\everiaclub\\";
+    }
+    else if (currentUrl.indexOf('misskon.com') != -1) {
+        var curPage = document.getElementsByTagName("h1")[0]
+        var con = document.getElementById("the-post")
+
+        _folder = curPage.innerText
+        _imgs = con.querySelectorAll('img.lazy');
+
+        for (var img of _imgs) {
+            img.src = img.getAttribute("data-src")
+        }
+        _folderRoot = "C:\\test\\misskon\\";        
     }
 
     return { imgs: _imgs, folderRoot: _folderRoot, folder: _folder }
