@@ -19,7 +19,7 @@ function getInfosBySite() {
         _imgs = at.getElementsByTagName("img");
 
         var title = document.getElementsByClassName('article-title')[0];
-        _folderRoot = "C:\\test\\juejin\\";
+        _folderRoot = "K:\\test\\juejin\\";
         _folder = title.innerText;
 
     }
@@ -29,7 +29,7 @@ function getInfosBySite() {
 
         var page = document.getElementsByClassName("page")[0];
         var curPage = page.getElementsByTagName("b")[0];
-        _folderRoot = "C:\\test\\bian\\";
+        _folderRoot = "K:\\test\\bian\\";
         _folder = curPage.innerText;
 
     }
@@ -43,7 +43,7 @@ function getInfosBySite() {
         _imgs = imgCon.getElementsByTagName("img")
 
         var title = document.getElementsByClassName("wp-block-post-title")[0]
-        _folderRoot = "C:\\test\\4khd\\"
+        _folderRoot = "K:\\test\\4khd\\"
         _folder = title.innerText
     }
 
@@ -52,7 +52,7 @@ function getInfosBySite() {
         _imgs = con.getElementsByTagName("img")
 
         var title = document.getElementsByClassName("entry-header")[0]
-        _folderRoot = "C:\\test\\4kup\\"
+        _folderRoot = "K:\\test\\4kup\\"
         _folder = title.getElementsByTagName('h1')[0].innerText
 
     }
@@ -65,7 +65,7 @@ function getInfosBySite() {
             img.src = img.getAttribute("data-original")
         }
 
-        _folderRoot = "C:\\test\\everiaclub\\";
+        _folderRoot = "K:\\test\\everiaclub\\";
     }
     else if (currentUrl.indexOf('misskon.com') != -1) {
         var curPage = document.getElementsByTagName("h1")[0]
@@ -77,7 +77,7 @@ function getInfosBySite() {
         for (var img of _imgs) {
             img.src = img.getAttribute("data-src")
         }
-        _folderRoot = "C:\\test\\misskon\\";        
+        _folderRoot = "K:\\test\\misskon\\";        
     }
 
     return { imgs: _imgs, folderRoot: _folderRoot, folder: _folder }
