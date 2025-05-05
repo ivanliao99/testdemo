@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Css for nginx explorer
 // @namespace    http://tampermonkey.net/
-// @version      0.4.1
+// @version      0.5
 // @description  try to take over the world!
 // @author       You
 // @match        http://192.168.1.103:7799/*
@@ -20,21 +20,22 @@
 	if (isMobile()) {
 
 
-		setTimeout(() => {
+		// setTimeout(() => {
 
-			document.querySelectorAll('a').forEach(originalLink => {
-				// 创建新的 a 标签
-				const newLink = document.createElement('a');
-				newLink.href = originalLink.href;
-				newLink.textContent = 'to new tab';
-				newLink.target = '_blank'; // 新标签页打开
-				newLink.style.marginLeft = '3px'; // 可选样式：添加一点间距
+		// 	document.querySelectorAll('a').forEach(originalLink => {
+		// 		// 创建新的 a 标签
+		// 		const newLink = document.createElement('a');
+		// 		newLink.href = originalLink.href;
+		// 		newLink.textContent = 'to new tab';
+		// 		newLink.target = '_blank'; // 新标签页打开
+		// 		newLink.style.marginLeft = '3px'; // 可选样式：添加一点间距
+				
 			  
-				// 插入到原始链接后面
-				originalLink.parentNode.insertBefore(newLink, originalLink.nextSibling);
-			  });
+		// 		// 插入到原始链接后面
+		// 		originalLink.parentNode.insertBefore(newLink, originalLink.nextSibling);
+		// 	  });
 			
-		}, 500)
+		// }, 500)
 
 		// 创建一个 <style> 元素
 		const style = document.createElement('style');
