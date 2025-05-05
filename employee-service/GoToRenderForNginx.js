@@ -3,6 +3,12 @@
 // @namespace    http://tampermonkey.net/
 // @version      0.3
 // @author       Jo
+// @exclude      *://*/*.jpg*
+// @exclude      *://*/*.jpeg*
+// @exclude      *://*/*.png*
+// @exclude      *://*/*.gif*
+// @exclude      *://*/*.webp*
+// @exclude      *://*/*.svg*
 // @exclude      http://192.168.1.103:7799/index/*
 // @match        http://192.168.1.103:7799/4khd/*
 // @match        http://192.168.1.103:7799/4kup/*
