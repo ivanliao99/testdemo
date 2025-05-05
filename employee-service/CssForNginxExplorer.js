@@ -11,16 +11,52 @@
 // ==/UserScript==
 
 (function () {
-    'use strict';
+	'use strict';
 
-    function isMobile() {
-        return /Mobi|Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
-    }
+	function isMobile() {
+		return /Mobi|Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
+	}
 
-    if (isMobile()) {
-        // 创建一个 <style> 元素
-        const style = document.createElement('style');
-        style.innerHTML = `
+	if (isMobile()) {
+
+
+		setTimeout(() => {
+			// 设置长按时间（毫秒）
+			const longPressTime = 800;
+
+			// 遍历所有 <a> 标签
+			document.querySelectorAll('a').forEach(link => {
+				let timer = null;
+
+				const openInNewTab = () => {
+					window.open(link.href, '_blank', 'noopener');
+				};
+
+				const startPress = (e) => {
+					e.preventDefault(); // 防止触摸时立即跳转
+					timer = setTimeout(openInNewTab, longPressTime);
+				};
+
+				const cancelPress = () => {
+					clearTimeout(timer);
+					timer = null;
+				};
+
+				// 鼠标事件
+				link.addEventListener('mousedown', startPress);
+				link.addEventListener('mouseup', cancelPress);
+				link.addEventListener('mouseleave', cancelPress);
+
+				// 触摸事件（移动端）
+				link.addEventListener('touchstart', startPress);
+				link.addEventListener('touchend', cancelPress);
+				link.addEventListener('touchcancel', cancelPress);
+			});
+		}, 500)
+
+		// 创建一个 <style> 元素
+		const style = document.createElement('style');
+		style.innerHTML = `
         @media (max-width: 1024px) {
             body {
                 background: #f7f7f7;
@@ -39,22 +75,22 @@
 
     `;
 
-        // 将 <style> 标签添加到 <head> 中
-        document.head.appendChild(style);
-        document.querySelectorAll('body a').forEach(aTag => {
-            const next = aTag.nextSibling;
+		// 将 <style> 标签添加到 <head> 中
+		document.head.appendChild(style);
+		document.querySelectorAll('body a').forEach(aTag => {
+			const next = aTag.nextSibling;
 
-            if (next && next.nodeType === Node.TEXT_NODE && next.textContent.trim()) {
-                const span = document.createElement('span');
-                span.textContent = next.textContent;
-                span.style.display = 'block';
+			if (next && next.nodeType === Node.TEXT_NODE && next.textContent.trim()) {
+				const span = document.createElement('span');
+				span.textContent = next.textContent;
+				span.style.display = 'block';
 
-                aTag.style.display = 'block';
+				aTag.style.display = 'block';
 
-                aTag.parentNode.insertBefore(span, next);
-                aTag.parentNode.removeChild(next);
-            }
-        });
-    }
-    // Your code here...
+				aTag.parentNode.insertBefore(span, next);
+				aTag.parentNode.removeChild(next);
+			}
+		});
+	}
+	// Your code here...
 })();
